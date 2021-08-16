@@ -9,10 +9,19 @@ minimum_length = 4
 
 
 def main():
+    password = get_password(minimum_length)
+    print_asterisks(password)
+
+
+def get_password(minimum_length):
     password = input("What is your password? ")
-    if len(password) == minimum_length:
-        print("*" * len(password))
-    else: password = input("What is your password? ")
+    while len(password) > minimum_length:
+        password = input("What is your password? ")
+    return password
+
+
+def print_asterisks(password):
+    print("*" * len(password))
 
 
 main()
