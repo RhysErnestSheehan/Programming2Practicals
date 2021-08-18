@@ -4,12 +4,15 @@ Broken program to determine score status
 """
 
 # TODO: Fix this!
+import random
 
 
 def main():
     score = float(input("Enter score: "))
     print(score)
     print(score_result(score))
+    random_score = random.randint(1, 100)
+    print(random_score)
 
 
 def score_result(score):
