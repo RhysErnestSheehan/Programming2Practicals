@@ -9,4 +9,8 @@ class BoxLayoutDemo(App):
         return self.root
 
 
+def handle_greet():
+    print('greet')
+    
+
 BoxLayoutDemo().run()
