@@ -35,10 +35,10 @@ def main():
 
         # TODO: Try these options one at a time
         # Option 1: rename file to new name - in place
-        os.rename(filename, new_name)
+        # os.rename(filename, new_name)
 
         # Option 2: move file to new place, with new name
-        # shutil.move(filename, 'temp/' + new_name)
+        shutil.move(filename, 'temp/' + new_name)
 
 
 def get_fixed_filename(filename):
@@ -57,7 +57,11 @@ def demo_walk():
         print("(Current working directory is: {})".format(os.getcwd()))
 
         # TODO: add a loop to rename the files
+        for filename in filenames:
+            name = os.path.join(directory_name, filename)
+            new_name = os.path.join(directory_name, filename.replace(" ", "_").replace(".TXT", ".txt"))
+            os.rename(name, new_name)
 
 
-main()
-# demo_walk()
+# main()
+demo_walk()
